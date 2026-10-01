@@ -1,0 +1,33 @@
+flows:
+  transfer_money:
+    description: |
+      Help the user send money to another person.
+      Start this flow when the user wants to send, transfer, or give money to someone.
+    steps:
+      - collect: recipient
+      - collect: amount
+        description: The number of US dollars to send.
+      - action: utter_transfer_complete
+
+  check_order:
+    description: |
+      Help the user check the status of an existing order.
+      Start this flow when the user asks to check, track, or find their order status.
+      This includes questions about shipment status, delivery status, order tracking,
+      where an order is, whether an order has shipped, or the current status of an order.
+      Examples:
+      "check my order"
+      "check my order status"
+      "what is my order status"
+      "where is my order"
+      "where is my package"
+      "track my order"
+      "is my order shipped"
+      "what is happening with my order"
+    run_pattern_completed: false
+    steps:
+      - collect: order_id
+        description: |
+          The customer's order number.
+          The order number is usually a number such as 1001, 1002, 1003, or 1004.
+      - action: action_check_order_status

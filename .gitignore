@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+venv/
+env/
+.venv/
+mainvenv/
+
+# Rasa
+models/
+.rasa/
+*.tar.gz
+rasa_core.log
+rasa.log
+
+# Database
+*.db
+*.sqlite3
+*.sql
+
+# Environment
+.env
+.env.local
+credentials.yml
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Archives
+*.rar
+*.zip
